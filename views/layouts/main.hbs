@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 4</title>
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+<body onload="init()">
+<!-- Header Menu of the Page -->
+<header>
+    <div class="top-nav">
+        <div class="mid">
+           {{#if session.user}}
+           <ul>
+               	{{#navLink "/"}} Home {{/navLink}}
+            	{{#navLink "/users?name="}} Users {{/navLink}}
+               	{{#navLink "/order"}} Order {{/navLink}}
+            	{{#navLink "/profile"}} Profile {{/navLink}}
+            	{{#navLink "/logout"}} Logout {{/navLink}}
+           </ul>
+           {{else}}
+           <ul>
+               	{{#navLink "/"}} Home {{/navLink}}
+            	{{#navLink "/users?name="}} Users {{/navLink}}
+               	{{#navLink "/register"}} Register {{/navLink}}
+            	{{#navLink "/login"}} Login {{/navLink}}
+            </ul>
+            {{/if}}
+        </div>
+    </div>
+    
+    
+</header>
+
+<!-- #main panel -->
+<div class="container">
+     <div class="row">
+     	{{{body}}}
+     </div>
+</div>
+
+<script src="/js/orderform.js"></script>
+</body>
+</html>

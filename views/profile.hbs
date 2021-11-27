@@ -1,0 +1,36 @@
+<div>
+	<h2>User Profile</h2>
+    <hr />
+    <fieldset>
+    <legend>Personal Information</legend>
+    <form method="post" action="/profile/update">
+    	
+		<br><div>
+			User Name: <input id="userName" name="username" type="text" value="{{data.username}}" readonly />
+		</div><br>
+		<div>
+			Privacy: <input id="privacy" name="privacy" type="text" value="{{data.privacy}}" />
+		</div><br>
+		
+		<input type="submit" value="Update Privacy" />
+	</form><br>
+	</fieldset>
+	
+	<fieldset>
+    <legend>Order History</legend>
+    	<div>
+    		{{#if orderHistory}}
+    		<p>Order ID</p>
+			{{#each orderHistory}}
+			<p>
+				<a href="/orders/{{_id}}"> {{_id}}</a>
+			</p>
+			{{/each}}
+			{{else}}
+			<i><p>No order history</p></i>
+			{{/if}}
+		</div><br>
+    </fieldset>
+    
+</div>
+	

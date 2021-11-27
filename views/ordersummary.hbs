@@ -1,0 +1,33 @@
+<div>
+	<h2>Order Summary</h2>
+    <hr />
+    <div>
+    	Order placed by -> {{data.username}}
+	</div><br>
+    <div>
+    	Restaurant name -> {{data.restaurantName}}
+	</div><br>
+   	<div>
+		<table border='1'>
+			<tr>
+				<th>Quantity</th>
+				<th style="text-align:left">Name</th>
+			</tr>
+			{{#each data.order}}
+			<tr>
+				<td>{{quantity}}</td>
+				<td>{{name}}</td>
+			</tr>
+			{{/each}}
+		</table>
+    </div><br>
+    <div>
+    	<p> Sub-total -> 	&emsp;&emsp;{{data.total}} </p>
+    	<p> Tax -> 			&emsp;&emsp;&emsp;&emsp;&emsp;{{data.tax}} </p>
+    	<p> Delivery Fee -> &ensp;{{data.fee}} </p>
+    	<p> ________________________________________</p>
+	</div>
+	<div>
+    	<strong><p> TOTAL -> 	&emsp;&emsp;&emsp;&emsp;{{data.subtotal}} </p></strong>
+	</div><br>
+</div>

@@ -1,0 +1,76 @@
+html,body {
+	font-family:  Verdana, "sans-serif", "Segoe UI", "DejaVu Sans", "Trebuchet MS",Segoe;
+}
+* {
+  box-sizing: border-box;
+}
+
+header {
+	
+}
+.top-nav {
+	height: 30px;
+	vertical-align: bottom;
+  bottom: 0;
+}
+.top-nav .img {
+	float: left;
+	width: 10%;
+}
+.top-nav .mid {
+	bottom: 0;
+	float: left;
+	margin: 0;
+	width: 60%;
+}
+.top-nav .mid ul {
+  list-style-type: none;
+	
+  margin: auto;
+  padding: 0;
+  overflow: hidden;
+}
+
+.top-nav .mid li {
+  float: left;
+  border-right:1px solid #66CFFF;
+}
+
+.top-nav .mid li:last-child {
+  border-right: none;
+}
+
+.top-nav .mid li a {
+  display: block;
+  color: #006699;
+  text-align: center;
+  padding: 0px 16px;
+  text-decoration: none;
+}
+
+/* container */
+.row {
+	top: 0;
+	width: 100%;
+	float: left;
+}
+.row-left {
+	float: left;
+	width: 25%;
+}
+hr.solid {
+  border-top: 3px solid #bbb;
+}
+
+.column {
+	float: left;
+}
+.left{
+	width: 10%;
+}
+.right {
+	width: 25%;
+}
+.middle {
+	width: 65%;
+}

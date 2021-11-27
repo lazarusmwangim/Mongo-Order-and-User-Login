@@ -1,0 +1,24 @@
+
+      <div>
+
+        <h2>Register</h2>
+        <hr />
+		{{#if errorMessage}}
+        	<div> <strong>Error:</strong> {{errorMessage}}</div>
+        {{/if}}
+        {{#if successMessage}}
+        	<div class="alert alert-success"> <strong>Success:</strong> {{successMessage}}</div><a class="btn btn-success pull-right"href="/login">&nbsp;&nbsp;&nbsp;Proceed to Log in&nbsp;&nbsp;&nbsp;</a><br /><br /><br />
+        
+        {{else}}
+        <form method="post" action="/register">
+            <div>
+            	<input autocomplete="off" id="username" name="username" type="text" placeholder="User Name" required/>
+            </div><br>
+            <div>
+            	<input id="password" name="password" type="password" placeholder="Password" required autocomplete="off"/>
+            </div><br>
+            <input type="submit" value="Register" />
+        </form>
+		{{/if}}
+
+    </div>

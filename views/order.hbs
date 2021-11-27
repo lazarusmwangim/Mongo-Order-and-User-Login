@@ -1,0 +1,18 @@
+<div>
+	<h2>Order Form</h2>
+    <hr />
+
+        {{#if errorMessage}}
+        	<div class="alert alertdanger"> <strong>Error:</strong> {{errorMessage}}</div>
+        {{/if}}
+	<form method="post" action="/login">
+		<select id="restaurant-select"></select>
+		<br><br>
+		<div id="info"></div>
+		<div id="main">
+			<div class="column left" id="left"></div>
+			<div class="column middle" id="middle"></div>
+			<div class="column right" id="right"></div>
+		</div>
+	</form>
+</div>

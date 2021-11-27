@@ -1,0 +1,17 @@
+<div>
+	<h2>Log In</h2>
+    <hr />
+
+        {{#if errorMessage}}
+        	<div class="alert alertdanger"> <strong>Error:</strong> {{errorMessage}}</div>
+        {{/if}}
+	<form method="post" action="/login">
+		<div>
+			<input  autocomplete="off" id="username" name="username" type="text" placeholder="User Name" required/>
+		</div><br>
+		<div>
+			<input autocomplete="off" id="password" name="password" type="password" placeholder="Password" required />
+		</div><br>
+		<input type="submit" value="Login" />
+	</form>
+</div>

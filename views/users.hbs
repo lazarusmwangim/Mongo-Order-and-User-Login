@@ -1,0 +1,17 @@
+<div>
+	<h2>Users</h2>
+    <hr />
+    <form method="post" action="/login">
+    	<div>
+			<p> <strong>User Name</strong></p>
+		</div>
+    	{{#each data}}
+    	<p>
+    		<a href="/users/{{_id}}"> {{username}}</a>
+    	</p>
+		
+		
+		{{/each}}
+	</form>
+</div>
+	
